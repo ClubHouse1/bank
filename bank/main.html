@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="banco.css">
+    <script type="text/javascript" src="banco.js"></script>
+    <title>Simulador de Conta Bancária</title>
+</head>
+<body>
+
+<h1>Simulador de Conta Bancária</h1>
+
+<div id="loginSection">
+    <label for="accountNumber">Número da Conta:</label>
+    <input type="text" id="accountNumber">
+    <br>
+    <label for="pin">PIN:</label>
+    <input type="password" id="pin">
+    <br>
+    <button onclick="authenticate()">Entrar</button>
+</div>
+
+<div id="transactionSection" style="display: none;">
+    <h2>Bem-vindo(a), <span id="accountHolder"></span>! Claro que trata-se de um teste. so esclarecendo. quero ver apenas a interacao entre as contas e o que da p fazer a partir dai.</h2>
+    <p>Número da Conta: <span id="loggedInAccountNumber"></span></p>
+    <p>Número do Cartão de Crédito: <span id="creditCardNumber"></span></p>
+    <p>Data: <span id="currentDate"></span></p>
+    <button onclick="checkBalance()">Ver Saldo</button>
+    <button onclick="withdraw()">Sacar</button>
+    <button onclick="moveToSavings()">Transferir para Poupança</button>
+    <button onclick="payCards()">Pagar Cartões</button>
+    <button onclick="applyForCreditCard()">Solicitar Cartão de Crédito</button>
+    <button onclick="deposit()">Depositar</button>
+    <button onclick="transferMoney()">Transferir Dinheiro</button>
+    <br>
+    <br>
+    <button onclick="logOut()">Sair</button>
+</div>
+
+<div id="marketingSection" style="display: none;">
+    <h2>Oferta Especial:</h2>
+    <p>Ganhe 10% de desconto na sua próxima compra usando o seu cartão bancário!</p>
+</div>
+
+<div id="creditCardApplicationForm" style="display: none;">
+    <h2>Solicitar Cartão de Crédito</h2>
+    <form onsubmit="submitCreditCardApplication(); return false;">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        <br>
+        <label for="address">Endereço:</label>
+        <input type="text" id="address" required>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<div id="formSubmittedMessage" style="display: none;">
+    <p>Obrigado por enviar o formulário!</p>
+</div>
+
+</body>
+</html>
